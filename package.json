@@ -2,10 +2,11 @@
   "name": "apiRest",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "index.ts",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "ts-node index.ts",
+    "build": "tsc",
+    "start": "node --env-file .env dist/index.js"
   },
   "keywords": [],
   "author": "",
