@@ -6,6 +6,6 @@ const test = (req:Express.Request, res: { json: (arg0: { status: number; success
     });
 }
 
-module.exports = {
+export default {
     test
-};
+}
