@@ -1,8 +1,11 @@
-import express from 'express';
-import routes from './src/routes/router';
+import express from "express";
+import morgan from "morgan";
+import routes from "./src/routes/router";
 
 const app = express();
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
+
+app.use(morgan("dev"));
 
 app.get("*", routes);
 
