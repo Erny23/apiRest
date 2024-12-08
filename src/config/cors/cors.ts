@@ -1,5 +1,5 @@
 // Definición de la lista blanca de orígenes permitidos
-const whitelist: string | string[] = process.env.WHITELIST || [""];
+const whitelist: string[] = ["https://ernestodev.com"];
 
 // Opciones de CORS
 /*const corsOptions = {
