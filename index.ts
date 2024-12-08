@@ -8,11 +8,17 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // middlewares
-app.use(cors(corsOptions && localOptions));
+if (process.env.NODE_ENV === 'production' || process.env.MODE) {
+  app.use(cors(corsOptions));
+} else {
+  app.use(cors(localOptions));
+}
 app.use(morgan("dev"));
 
+// Solicitudes GET
 app.get("*", routes);
 
+// Conexión
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
