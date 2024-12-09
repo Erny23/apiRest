@@ -1,5 +1,5 @@
 // Opciones de CORS (básico)
-export const localOptions = {
+export const localCors = {
   origin: ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:8080", "http://127.0.0.1:8080"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
@@ -7,6 +7,7 @@ export const localOptions = {
 
 // Definición de la lista blanca de orígenes permitidos
 const whitelist: string[] = ["https://ernestodev.com", "http://localhost:3000", "http://127.0.0.1:3000","http://localhost:8080", "http://127.0.0.1:8080"];
+//const whitelist: string[] = ["https://ernestodev.com"];
 
 // Opciones de CORS (dinámico)
 export const corsOptions = {
