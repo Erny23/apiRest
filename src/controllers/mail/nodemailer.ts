@@ -5,7 +5,7 @@ const mailer:ReqRest = async (req, res) => {
     const { firstName, lastName, company, email, phone, message } = req.body;
 
     // Validar que se recibieron los datos
-    if (!firstName || !lastName || !company || !email || !phone || !message) {
+    if (!firstName || !lastName || !company || !email || !phone) {
         return res.status(400).json({ error: "Faltan datos requeridos" });
     }
 
